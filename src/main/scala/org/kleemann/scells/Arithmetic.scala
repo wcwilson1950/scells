@@ -1,7 +1,7 @@
 package org.kleemann.scells
 
 trait Arithmetic { this: Evaluator =>
-  operations += (
+  operations ++= Map(
     "add"  -> { case List(x,y) => x + y },
     "sub"  -> { case List(x,y) => x - y },
     "div"  -> { case List(x,y) => x / y },

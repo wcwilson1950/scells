@@ -1,17 +1,12 @@
-name := """scells"""
+name := "scells"
 
 version := "1.0"
 
-scalaVersion := "2.11.1"
+scalaVersion := "2.13.14"
 
-// Change this to another test framework if you prefer
-libraryDependencies += "org.scalatest" %% "scalatest" % "2.1.6" % "test"
-
-// how do I know what versions are correct?
-libraryDependencies += "org.scala-lang" % "scala-swing" % "2.11.0-M7"
-
-libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.2"
-
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.18" % Test
+libraryDependencies += "org.scala-lang.modules" %% "scala-swing" % "3.0.0"
+libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.3.0"
+scalacOptions += "-deprecation"
 // Uncomment to use Akka
 //libraryDependencies += "com.typesafe.akka" % "akka-actor_2.11" % "2.3.3"
-

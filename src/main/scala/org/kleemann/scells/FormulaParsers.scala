@@ -18,6 +18,7 @@ object FormulaParsers extends RegexParsers {
   def range: Parser[Range] =
     cell~":"~cell ^^ {
       case c1~":"~c2 => Range(c1, c2)
+      case other     => throw new IllegalArgumentException(s"Unexpected parse result: $other")
     }
   
   def number: Parser[Number] =
